@@ -15,7 +15,6 @@
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />
 
-
     <!-- CSS Files -->
     <link href="{{ asset('clients/css/bootstrap.min.css') }}" rel="stylesheet" />
     <link href="{{ asset('clients/css/material-kit.css') }}" rel="stylesheet"/>
@@ -65,7 +64,7 @@
                                             <a href="{{ url('/admin/envios') }}">Gestionar envios</a>
                                         </li>
                                         <li>
-                                            <a href="#">Pedidos</a>
+                                            <a href="{{ url('/admin/pedido')}}">Pedidos</a>
                                         </li>
                                     @endif
                                     <li>

@@ -3,6 +3,7 @@
 use App\Http\Controllers\admin\CategoryController;
 use App\Http\Controllers\admin\EnvioController;
 use App\Http\Controllers\admin\ImageController;
+use App\Http\Controllers\admin\PedidosController;
 use App\Http\Controllers\admin\PrendaController as AdminPrendaController;
 use App\Http\Controllers\CartController;
 use App\Http\Controllers\CartDetailController;
@@ -83,4 +84,8 @@ Route::middleware(['auth','admin'])->namespace('Admin')->prefix('admin')->group(
 
 	Route::post('/envios/{envio}/actEstPed', [EnvioController::class, 'ActualizarEstadoPedido']); //actualizar el estado del pedido
 	Route::get('/envios/{envio}', [EnvioController::class, 'show']);
+
+	//pédidos
+	Route::get('/pedido', [PedidosController::class, 'index']); //listar
+	Route::get('/pedido/{pedido}', [PedidosController::class, 'show']);
 });

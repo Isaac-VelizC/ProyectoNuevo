@@ -2663,12 +2663,12 @@ h2.title {
   color: #03a9f4;
 }
 
-.nav-tabs {
+/*.nav-tabs {
   background: #9c27b0;
   border: 0;
   border-radius: 3px;
   padding: 0 15px;
-}
+}*/
 .nav-tabs > li > a {
   color: #FFFFFF;
   border: 0;

@@ -8,7 +8,6 @@
 {
 	padding: 0px 20px;
     margin: 0px 5px 5px 0px;
-    float: left;
 	border-radius: 20px;
 	font-size: 12px;
 	color: #FFF;
@@ -102,15 +101,15 @@
                             @foreach($ventas as $venta)
                                 <tr>
                                     <td class="text-center">{{ $venta->id }}</td>
-                                    <td>{{$venta->fecha_reserva}}</td>
-                                    <td>${{number_format($venta->total, 2)}}</td>
+                                    <td class="text-center">{{$venta->fecha_reserva}}</td>
+                                    <td class="text-center">${{number_format($venta->total, 2)}}</td>
 
                                     @if( $venta->estado === 'Entregado' )
-                                        <td><span class="action-button blue">{{ $venta->estado }}</span></td>
+                                        <td class="text-center"><span class="action-button blue">{{ $venta->estado }}</span></td>
                                     @elseif ( $venta->estado === 'Enviandose' )
-                                        <td><span class="action-button green">{{ $venta->estado }}</span></td>
+                                        <td class="text-center"><span class="action-button green">{{ $venta->estado }}</span></td>
                                     @else
-                                        <td><span class="action-button red">{{ $venta->estado }}</span></td>
+                                        <td class="text-center"><span class="action-button red">{{ $venta->estado }}</span></td>
                                     @endif
                                     
                                     <td class="td-actions text-right">

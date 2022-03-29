@@ -50,7 +50,7 @@
                                 </div>
                                 <div class="row">
                                 @endif
-                                
+
                                 <div class="col-md-4">
                                  <div class="team-player">
                                 <img src="{{ $product->featured_image_url }}" alt="Thumbnail Image" class="img-rounded img-responsive">
@@ -59,7 +59,7 @@
                                        
                                         </h4>
                                         <p class="description">{{ $product->description }}</p>
-                                    </div>  
+                                    </div>
                                     </div> 
                                 @endforeach
                 </div>

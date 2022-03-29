@@ -39,11 +39,11 @@
                         </tbody>
                     </table>
                         
-                    <!--p class='text-right'><strong>Importe a pagar: </strong>{{ auth()->user()->cart->total }}</p-->
+                    <p class='text-right'><strong>Importe a pagar: </strong>${{ $total }}</p>
 
-            <a class="btn btn-info" href="{{route("pedidos.index")}}">
+            <!--a class="btn btn-info" href="{{route("pedidos.index")}}">
                 <i class="fa fa-arrow-left"></i>&nbsp;Volver
-            </a>                                    
+            </a-->
             <a class="btn btn-success" href="{{route("pedidos.ticket", ["id" => $venta->id])}}">
                 <i class="fa fa-print"></i>&nbsp;Ticket
             </a>

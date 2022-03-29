@@ -91,9 +91,14 @@ class PedidoController extends Controller
     public function show($id)
     {
         $venta = Pedido::find($id);
-
         $detailPedido = PedidoDetalle::where("pedido_id", $id)->get();
-        return view('pedidos.show')->with(compact('detailPedido', 'venta'));
+
+        $total = 0;
+        foreach ($detailPedido as $producto) {
+            $total += $producto->cantidad * $producto->prenda->precioUnit;
+        }
+
+        return view('pedidos.show',["total" => $total])->with(compact('detailPedido', 'venta'));
     }
 
     /**
